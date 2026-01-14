@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Browse digital products – clean cards and simple pricing." />
+  <title>Products — RSK Digital</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/data/products.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Go to Home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">RSK Digital</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <div id="navMenu" class="nav-menu">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="products.html">Products</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+
+          <div class="nav-actions">
+            <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+              <span class="btn-icon" aria-hidden="true">☾</span>
+              <span class="btn-label">Theme</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div>
+            <h1 class="page-title">Products</h1>
+            <p class="page-subtitle">Clean cards with price — quick browsing, mobile-friendly.</p>
+          </div>
+
+          <div class="toolbar">
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" class="input" type="search" placeholder="Search products..." autocomplete="off" />
+            </div>
+
+            <select id="categorySelect" class="select" aria-label="Filter by category">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="productsGrid" class="product-grid" aria-live="polite"></div>
+
+        <div id="emptyState" class="empty-state hidden">
+          <div class="empty-emoji" aria-hidden="true">🫥</div>
+          <h3>No matches found</h3>
+          <p class="muted">Try another keyword or switch category.</p>
+          <button class="btn btn-secondary" id="resetFilters" type="button">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h3 class="cta-title">Want to buy?</h3>
+            <p class="cta-text">Message us on Telegram or WhatsApp and we’ll help instantly.</p>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Contact →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand small">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">RSK Digital</span>
+        </div>
+        <p class="muted">© <span id="year"></span> RSK Digital. All rights reserved.</p>
+      </div>
+
+      <div class="footer-right">
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
